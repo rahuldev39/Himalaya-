@@ -1,0 +1,20 @@
+mixin feadture-box(fimage, ftitle)
+  .col.col--4-of-12
+    img(src="img/#{fimage}.jpg", alt="alt" class="round-box")
+    h4 #{ftitle}
+
+mixin mountain-list(mountain,i)
+  .col.col--2-of-12
+    a(href="" class="mountain-block")
+      img(src="img/m#{i+1}.jpg", alt="alt")
+      h4 #{mountain.title}
+      span #{mountain.eval}m
+
+mixin track  
+  each track,i in tecksList
+    .col.col--4-of-20
+      .trek-block.flex-element.column
+        img(src="img/t#{i+1}.jpg", alt="alt")
+        .trak-detail.flex-element.column.align-bw.flex-grow
+          strong.mar-b-10 #{track.title}
+          span  #{track.time} Days 

@@ -1,0 +1,83 @@
+@import "_variable.scss";
+@import "_mixin.scss";
+*
+{
+  box-sizing: border-box;
+}
+body
+{
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  background-color: $bg-color;
+}
+img
+{
+  max-width: 100%;
+}
+.container
+{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.text-right
+{
+  text-align: right;
+}
+.text-center
+{
+  text-align: center;
+}
+.inline-list
+{
+  padding: 0px;
+  margin: 0px;
+  li
+  {
+    display: inline-block;;
+  }
+}
+.round-box
+{
+  border-radius: 50%;
+}
+@include margins;
+.flex-element
+{
+  display: flex;
+&.column
+{
+  flex-direction: column;
+}
+&.pull-right
+{
+  justify-content: flex-end;
+}
+&.center
+{
+  justify-content: center;
+}
+&.center-both
+{
+  align-items: center;
+  justify-content: center;
+}
+&.align-bw
+{
+  justify-content: space-between;
+}
+&.wrap
+{
+  flex-wrap: wrap;
+}
+}
+.flex-grow
+{
+  flex: 1;
+}
+@import "_grid.scss";
+@import "_nav.scss";
+@import "_home.scss";
+@import "_main-header.scss";

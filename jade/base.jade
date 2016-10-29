@@ -1,0 +1,42 @@
+include _variable.jade
+include _mixin.jade
+block page-name
+  -var pName='Pagename'
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    link(rel="stylesheet", href="css/style.css", attr)
+    block title
+      title website title
+  body
+    nav.fixed-nav
+      .container
+        .row.flex-element.center-both.wrap
+          .col.col--2-of-12
+            .logo
+              a(href="#") Himalaya
+          .col.col--9-of-12
+              .flex-element.pull-right
+                  ul.navbar.inline-list
+                    each link,key in navLink
+                      if key==pName
+                        li
+                          a.active(href="#{link}") #{key}
+                      else
+                        li
+                          a(href="#{link}") #{key}
+    header
+        block header
+          h3 This is Header Title
+    main
+      block main
+        h2 This is main content
+    footer
+      .container
+        p
+        | &copy; 2016 |
+        i.fa.fa-github(aria-hidden='true') &nbsp;
+        a(href='#') Himalaya
+    block script
+      script(src="js/jquery.js")

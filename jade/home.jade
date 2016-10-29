@@ -1,0 +1,99 @@
+//output:../index.html
+extend base.jade
+block page-name
+  -var pName='Home'
+block title
+  title Himalaya :: The land of snow 
+block header
+  .main-header.text-center.flex-element.center-both#particles-js
+    .cloud
+    .header-inner
+      h2 
+        img(src="img/logo.png", alt="alt")
+      span.sub-lead Abode of Snow
+      .high-line
+      span.eval 29,029 ft 
+        small 
+          i Above Sea level
+block main 
+  .quote-section
+    .container
+      .mountain-quote 
+        blockquote
+          p Creative people who can't help but explore other mental territories are at greater risk, just as someone who climbs a mountain is more at risk than someone who just walks along a village lane.
+          i R. D. Laing
+  section.feature-box
+    .container
+      .row.text-center
+        +feadture-box('f1','Trekking/Mountaineering')
+        +feadture-box('f2','Family/Group Tour')
+        +feadture-box('f3','Mountain Biking/Rafting')
+  section.mountain-list.white
+    .container
+      .row
+        each mountain,i in mountainList
+          +mountain-list(mountain,i)
+  section.accordion-section
+    .container
+      .row
+        .col.col--6-of-12
+          #accordion-id.accordion-group
+              .panel.panel-default
+                .panel-heading
+                    a.accordion-toggle.active(href="#" data-parent="#collapse1"  title="img/ac1")
+                      | River & Lakes
+                #collapse1.panel-collapse
+                  .panel-body
+                    p Glaciers and permanent snow fields cover the higher regions of the Himalayas. They are the source of streams that flow into the two big rivers of the region.The Indus flows to the west and through Pakistan into the Arabia Sea. The Ganges and Brahmaputra flow to the east and get together in Bangladesh. They form  the largest delta in the world.
+                    
+              .panel.panel-default
+                .panel-heading
+                    a.accordion-toggle(href="#" data-parent="#collapse2" title="img/ac2")
+                      | Climate
+                #collapse2.panel-collapse
+                  .panel-body
+                    p Almost every type of climate can be found in the different altitudes of the mountain range. The lower slopes in the south are home to tropical plants and tea. 
+                    p The Himalayas influence the climate in both India and Tibet. They form a barrier for monsoon winds that blow from the Indian Ocean over India.
+
+                      
+              .panel.panel-default
+                .panel-heading
+                    a.accordion-toggle(href="#" data-parent="#collapse3" title="img/ac3")
+                      | People
+                #collapse3.panel-collapse
+                  .panel-body
+                    p The Himalayas are very sparsely populated because of the harsh climate.  Most people live on the lower Indian slopes. Many people earn their living as sherpas, guiding tourists and mountaineers to the peaks of the mountain range.
+                    p Most of the passes that cross the Himalayas are over 5,000 high. They are covered with snow during the winter period and almost impossible to pass.
+
+                        
+              .panel.panel-default
+                .panel-heading
+                    a.accordion-toggle(href="#" data-parent="#collapse4" title="img/ac4")
+                      | Tourism
+                #collapse4.panel-collapse
+                  .panel-body
+                    p Mountain climbing has become the main tourist activity in the Himalaya Mountains. It started towards the end of the 19th century when many mountaineers started climbing the peaks. In 1953 Edmund Hillary and Sherpa Tenzing Norgay were the first to reach Mount Everest, the world’s highest mountain.
+            
+        .col.col--6-of-12
+          .ac-img
+            img(src="img/ac1.jpg", alt="alt")  
+  section.testimonials.white
+    .container
+      .row
+        .col.col--6-of-12.col--centered
+          .testimnial-block.text-center
+            img.round-box.avtar.mar-b-20(src="img/avatar.png", alt="")
+            .text  Keep close to Nature's heart... and break clear away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit clean.
+            .user-detail.mar-t-10 
+              strong John Muir
+              i Web Design
+  
+  section.treks
+    .container
+      .row
+        +track
+                   
+block append script
+  script(src="js/particles.js")
+  script(src="js/app.js")
+  script(src="js/script.js")

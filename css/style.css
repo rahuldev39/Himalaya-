@@ -1,0 +1,693 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  background-color: #f8f8f8; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.inline-list {
+  padding: 0px;
+  margin: 0px; }
+  .inline-list li {
+    display: inline-block; }
+
+.round-box {
+  border-radius: 50%; }
+
+.mar-b-10 {
+  margin-bottom: 10px; }
+
+.mar-b-15 {
+  margin-bottom: 15px; }
+
+.mar-b-20 {
+  margin-bottom: 20px; }
+
+.mar-b-25 {
+  margin-bottom: 25px; }
+
+.mar-b-30 {
+  margin-bottom: 30px; }
+
+.mar-t-10 {
+  margin-top: 10px; }
+
+.mar-t-15 {
+  margin-top: 15px; }
+
+.mar-t-20 {
+  margin-top: 20px; }
+
+.mar-t-25 {
+  margin-top: 25px; }
+
+.mar-t-30 {
+  margin-top: 30px; }
+
+.flex-element {
+  display: flex; }
+  .flex-element.column {
+    flex-direction: column; }
+  .flex-element.pull-right {
+    justify-content: flex-end; }
+  .flex-element.center {
+    justify-content: center; }
+  .flex-element.center-both {
+    align-items: center;
+    justify-content: center; }
+  .flex-element.align-bw {
+    justify-content: space-between; }
+  .flex-element.wrap {
+    flex-wrap: wrap; }
+
+.flex-grow {
+  flex: 1; }
+
+/*-----------------------------------*\
+
+  $TOAST-GRID
+
+  An insane grid.
+  You'd be mad to use it.
+
+  Usage
+  =====
+
+  Assuming default values:
+
+  <div class="row">
+    <div class="col col--1-of-2">
+      A half-width column.
+    </div>
+    <div class="col col--1-of-4 col--pull-1-of-4">
+      A quarter, pulled left by its own width. You get this, right?
+    </div>
+  </div>
+
+
+  Customisation
+  =============
+
+  $toast-grid-namespace and $toast-grid-column-namespace
+  adjusts the class names for the grid. With
+  default values, grid wrappers have a class
+  of '.grid' and columns '.grid__col'.
+
+  $toast-col-groups(n) adjusts column divisions.
+  For example, $toast-col-groups(12) will produce
+  a 12-column grid. $col-groups(3,6,8)
+  will produce a 3-, 6-, and 8-column grid.
+
+  $toast-gutter-width isΓÇöyou guessed itΓÇöthe gutter
+  width. Accepts any unit.
+
+  That's it. Have fun.
+
+\*-----------------------------------*/
+.row {
+  list-style: none;
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.col--12-of-12, .col--20-of-20 {
+  width: 100%; }
+
+.col--6-of-12, .col--10-of-20 {
+  width: 50%; }
+
+.col--4-of-12 {
+  width: 33.33333%; }
+
+.col--8-of-12 {
+  width: 66.66667%; }
+
+.col--3-of-12, .col--5-of-20 {
+  width: 25%; }
+
+.col--9-of-12, .col--15-of-20 {
+  width: 75%; }
+
+.col--push-12-of-12, .col--push-20-of-20 {
+  margin-left: 100%; }
+
+.col--push-6-of-12, .col--push-10-of-20 {
+  margin-left: 50%; }
+
+.col--push-4-of-12 {
+  margin-left: 33.33333%; }
+
+.col--push-8-of-12 {
+  margin-left: 66.66667%; }
+
+.col--push-3-of-12, .col--push-5-of-20 {
+  margin-left: 25%; }
+
+.col--push-9-of-12, .col--push-15-of-20 {
+  margin-left: 75%; }
+
+.col--pull-12-of-12, .col--pull-20-of-20 {
+  margin-left: -100%; }
+
+.col--pull-6-of-12, .col--pull-10-of-20 {
+  margin-left: -50%; }
+
+.col--pull-4-of-12 {
+  margin-left: -33.33333%; }
+
+.col--pull-8-of-12 {
+  margin-left: -66.66667%; }
+
+.col--pull-3-of-12, .col--pull-5-of-20 {
+  margin-left: -25%; }
+
+.col--pull-9-of-12, .col--pull-15-of-20 {
+  margin-left: -75%; }
+
+.col--1-of-12 {
+  width: 8.33333%; }
+
+.col--push-1-of-12 {
+  margin-left: 8.33333%; }
+
+.col--pull-1-of-12 {
+  margin-left: -8.33333%; }
+
+.col--2-of-12 {
+  width: 16.66667%; }
+
+.col--push-2-of-12 {
+  margin-left: 16.66667%; }
+
+.col--pull-2-of-12 {
+  margin-left: -16.66667%; }
+
+.col--5-of-12 {
+  width: 41.66667%; }
+
+.col--push-5-of-12 {
+  margin-left: 41.66667%; }
+
+.col--pull-5-of-12 {
+  margin-left: -41.66667%; }
+
+.col--7-of-12 {
+  width: 58.33333%; }
+
+.col--push-7-of-12 {
+  margin-left: 58.33333%; }
+
+.col--pull-7-of-12 {
+  margin-left: -58.33333%; }
+
+.col--10-of-12 {
+  width: 83.33333%; }
+
+.col--push-10-of-12 {
+  margin-left: 83.33333%; }
+
+.col--pull-10-of-12 {
+  margin-left: -83.33333%; }
+
+.col--11-of-12 {
+  width: 91.66667%; }
+
+.col--push-11-of-12 {
+  margin-left: 91.66667%; }
+
+.col--pull-11-of-12 {
+  margin-left: -91.66667%; }
+
+.col--1-of-20 {
+  width: 5%; }
+
+.col--push-1-of-20 {
+  margin-left: 5%; }
+
+.col--pull-1-of-20 {
+  margin-left: -5%; }
+
+.col--2-of-20 {
+  width: 10%; }
+
+.col--push-2-of-20 {
+  margin-left: 10%; }
+
+.col--pull-2-of-20 {
+  margin-left: -10%; }
+
+.col--3-of-20 {
+  width: 15%; }
+
+.col--push-3-of-20 {
+  margin-left: 15%; }
+
+.col--pull-3-of-20 {
+  margin-left: -15%; }
+
+.col--4-of-20 {
+  width: 20%; }
+
+.col--push-4-of-20 {
+  margin-left: 20%; }
+
+.col--pull-4-of-20 {
+  margin-left: -20%; }
+
+.col--6-of-20 {
+  width: 30%; }
+
+.col--push-6-of-20 {
+  margin-left: 30%; }
+
+.col--pull-6-of-20 {
+  margin-left: -30%; }
+
+.col--7-of-20 {
+  width: 35%; }
+
+.col--push-7-of-20 {
+  margin-left: 35%; }
+
+.col--pull-7-of-20 {
+  margin-left: -35%; }
+
+.col--8-of-20 {
+  width: 40%; }
+
+.col--push-8-of-20 {
+  margin-left: 40%; }
+
+.col--pull-8-of-20 {
+  margin-left: -40%; }
+
+.col--9-of-20 {
+  width: 45%; }
+
+.col--push-9-of-20 {
+  margin-left: 45%; }
+
+.col--pull-9-of-20 {
+  margin-left: -45%; }
+
+.col--11-of-20 {
+  width: 55.0%; }
+
+.col--push-11-of-20 {
+  margin-left: 55.0%; }
+
+.col--pull-11-of-20 {
+  margin-left: -55.0%; }
+
+.col--12-of-20 {
+  width: 60%; }
+
+.col--push-12-of-20 {
+  margin-left: 60%; }
+
+.col--pull-12-of-20 {
+  margin-left: -60%; }
+
+.col--13-of-20 {
+  width: 65%; }
+
+.col--push-13-of-20 {
+  margin-left: 65%; }
+
+.col--pull-13-of-20 {
+  margin-left: -65%; }
+
+.col--14-of-20 {
+  width: 70%; }
+
+.col--push-14-of-20 {
+  margin-left: 70%; }
+
+.col--pull-14-of-20 {
+  margin-left: -70%; }
+
+.col--16-of-20 {
+  width: 80%; }
+
+.col--push-16-of-20 {
+  margin-left: 80%; }
+
+.col--pull-16-of-20 {
+  margin-left: -80%; }
+
+.col--17-of-20 {
+  width: 85%; }
+
+.col--push-17-of-20 {
+  margin-left: 85%; }
+
+.col--pull-17-of-20 {
+  margin-left: -85%; }
+
+.col--18-of-20 {
+  width: 90%; }
+
+.col--push-18-of-20 {
+  margin-left: 90%; }
+
+.col--pull-18-of-20 {
+  margin-left: -90%; }
+
+.col--19-of-20 {
+  width: 95%; }
+
+.col--push-19-of-20 {
+  margin-left: 95%; }
+
+.col--pull-19-of-20 {
+  margin-left: -95%; }
+
+.col {
+  box-sizing: border-box;
+  min-height: 1px;
+  padding-left: 15px;
+  vertical-align: top; }
+  @media (max-width: 700px) {
+    .col {
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%; } }
+  @media (max-width: 700px) and (min-width: 480px) {
+    .col[class*="col--m-"] {
+      display: inline-block;
+      margin-right: -.24em; }
+    .col.col--m-1-of-2, .col.col--m-2-of-4 {
+      width: 50%; }
+    .col.col--m-1-of-3 {
+      width: 33.33333%; }
+    .col.col--m-2-of-3 {
+      width: 66.66667%; }
+    .col.col--m-1-of-4 {
+      width: 25%; }
+    .col.col--m-3-of-4 {
+      width: 75%; } }
+  @media (max-width: 480px) {
+    .col[class*="col--s-"] {
+      display: inline-block;
+      margin-right: -.24em; }
+    .col.col--s-1-of-2, .col.col--s-2-of-4 {
+      width: 50%; }
+    .col.col--s-1-of-3 {
+      width: 33.33333%; }
+    .col.col--s-2-of-3 {
+      width: 66.66667%; }
+    .col.col--s-1-of-4 {
+      width: 25%; }
+    .col.col--s-3-of-4 {
+      width: 75%; } }
+
+.col--centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.col--d-first {
+  float: left; }
+
+.col--d-last {
+  float: right; }
+
+.row--no-gutter {
+  margin-left: 0;
+  width: 100%; }
+  .row--no-gutter .col {
+    padding-left: 0; }
+  .row--no-gutter .col--span-all {
+    margin-left: 0;
+    width: 100%; }
+
+.col--ab {
+  vertical-align: bottom; }
+
+.col--am {
+  vertical-align: middle; }
+
+nav {
+  background-color: #03A9F4; }
+  nav.fixed-nav {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000; }
+  nav a {
+    color: white; }
+  nav .logo a {
+    display: block;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 600; }
+  nav ul.navbar li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    transition: all ease-in-out 300ms; }
+    nav ul.navbar li a:hover, nav ul.navbar li a.active {
+      background-color: #039be0; }
+
+.mountain-quote {
+  background-color: white; }
+  .mountain-quote blockquote {
+    margin: 0px;
+    padding: 30px 20px 20px 59px;
+    border-left: 5px solid #ace4fe;
+    background-image: url(../img/comma-icon.png);
+    background-repeat: no-repeat;
+    background-position: 15px 20px;
+    box-shadow: 0px 7px 3px -6px #d2d2d2; }
+    .mountain-quote blockquote p {
+      margin: 0px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: #666666; }
+    .mountain-quote blockquote i {
+      color: #03A9F4;
+      font-size: 14px; }
+
+section {
+  padding: 4em 0px; }
+  section.white {
+    background-color: white; }
+
+.feature-box img {
+  max-width: 100px;
+  border: 7px solid transparent;
+  border-top-color: #03A9F4;
+  border-bottom-color: #03A9F4;
+  transition: all ease-in-out 300ms;
+  display: inline-block; }
+.feature-box h4 {
+  margin-bottom: 0px; }
+.feature-box .col {
+  cursor: pointer; }
+  .feature-box .col:hover img {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: #03A9F4;
+    border-right-color: #03A9F4; }
+
+.mountain-list {
+  background-image: url(../img/bg-m.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative; }
+  .mountain-list::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1; }
+
+.mountain-block {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #f3f3f3;
+  color: black;
+  transition: all ease-in-out 300ms; }
+  .mountain-block:hover {
+    background-color: #c5ecfe;
+    border: 1px solid #60ccfd;
+    transform: scale(1.06); }
+  .mountain-block img {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px; }
+  .mountain-block h4 {
+    margin-top: 0px;
+    margin-bottom: 4px; }
+  .mountain-block span {
+    color: #4d4d4d;
+    font-style: italic; }
+
+.accordion-group .panel .panel-heading a {
+  display: block;
+  background-color: #03A9F4;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #0394d6;
+  font-weight: 600;
+  font-size: 14px; }
+  .accordion-group .panel .panel-heading a:hover, .accordion-group .panel .panel-heading a.active {
+    background-color: #039fe5; }
+.accordion-group .panel-collapse {
+  display: none; }
+  .accordion-group .panel-collapse .panel-body {
+    display: inline-block;
+    padding: 15px;
+    border: 1px solid #03A9F4; }
+    .accordion-group .panel-collapse .panel-body p {
+      margin: 0px; }
+
+.ac-img img {
+  border: 4px solid #03A9F4;
+  border-radius: 42px 2px 42px 2px; }
+
+.testimonials {
+  background-image: url(../img/mountains.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .testimonials .avtar {
+    max-width: 100px; }
+  .testimonials .user-detail strong {
+    margin-right: 5px;
+    font-size: 14px;
+    display: inline-block;
+    color: #03A9F4; }
+
+.trek-block {
+  background-color: #dfdfdf;
+  height: 100%;
+  color: black;
+  cursor: pointer;
+  transition: all ease-in-out 300ms; }
+  .trek-block:hover {
+    background-color: #03A9F4;
+    color: white;
+    box-shadow: 0px 6px 4px -5px rgba(136, 136, 136, 0.76);
+    transform: translateY(-8px); }
+  .trek-block .trak-detail {
+    padding: 10px; }
+    .trek-block .trak-detail strong {
+      font-weight: 600;
+      display: block; }
+    .trek-block .trak-detail span {
+      display: block; }
+
+header {
+  position: relative;
+  /* ---- particles.js container ---- */ }
+  header #particles-js canvas {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1; }
+
+.main-header {
+  background-image: url("../img/main-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1000; }
+  .main-header::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1; }
+  .main-header .header-inner {
+    margin-top: 100px; }
+  .main-header .cloud {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: url(../img/cloud.png);
+    background-repeat: no-repeat;
+    background-position: 20px 60px;
+    background-size: 703px;
+    z-index: -1;
+    animation: cloud 100s linear alternate infinite; }
+  .main-header h2 {
+    margin-top: 0;
+    font-size: 67px;
+    margin-bottom: 5px;
+    font-weight: lighter; }
+    .main-header h2 img {
+      display: block; }
+  .main-header span {
+    display: block; }
+    .main-header span.sub-lead {
+      font-size: 13px;
+      margin-bottom: 1em;
+      color: white;
+      padding: 1px 0px;
+      display: inline-block;
+      border: 1px solid white;
+      border-radius: 20px;
+      padding: 3px 22px; }
+    .main-header span.eval {
+      font-size: 16px;
+      font-weight: lighter; }
+  .main-header .high-line {
+    display: block;
+    width: 1px;
+    margin: 0 auto;
+    background-color: white;
+    height: 70px;
+    position: relative;
+    margin-top: -13px;
+    margin-bottom: 15px; }
+    .main-header .high-line::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      border: 1px solid white;
+      border-radius: 50%;
+      bottom: -11px;
+      left: -5px;
+      background-color: #03A9F4; }
+
+@keyframes cloud {
+  0% {
+    background-position: 100% 100px; }
+  100% {
+    background-position: 0px 100px; } }
+
+/*# sourceMappingURL=style.css.map */

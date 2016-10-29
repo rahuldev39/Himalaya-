@@ -1,0 +1,36 @@
+//overlay effect
+@mixin overlay($o-color,$o-opacity)
+{
+  &::after
+  {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba($o-color, $o-opacity);
+    z-index: -1;
+  }
+
+}
+
+@mixin margins {
+$margins-val:(10,15,20,25,30);
+//margin bottom
+  @each $mar in $margins-val
+  {
+    .mar-b-#{$mar}
+    {
+      margin-bottom: #{$mar}px;
+    }
+  }
+//margin top
+@each $mar in $margins-val
+{
+  .mar-t-#{$mar}
+  {
+    margin-top: #{$mar}px;
+  }
+}
+}

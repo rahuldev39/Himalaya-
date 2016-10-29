@@ -1,0 +1,41 @@
+nav
+{
+  background-color:$main-color;
+  &.fixed-nav
+  {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000
+  }
+  a
+  {
+    color: white;
+  }
+  .logo
+  {
+    a{
+      display: block;
+      font-size: 19px;
+      text-decoration: none;
+      font-weight: 600;
+
+    }
+  }
+  ul.navbar
+  {
+    li
+    {
+      a{
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        transition: all ease-in-out 300ms;
+        &:hover,&.active
+        {
+          background-color: darken($main-color, 4);
+        }
+      }
+    }
+  }
+}
