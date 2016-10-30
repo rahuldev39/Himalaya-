@@ -1,16 +1,14 @@
 @import "_variable.scss";
 @import "_mixin.scss";
+@import "_normalize.scss";
+@include normalize();
 *
 {
   box-sizing: border-box;
 }
 body
 {
-  padding: 0px;
-  margin: 0px;
-  height: 100%;
   font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
   background-color: $bg-color;
 }
 img
