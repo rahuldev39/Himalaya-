@@ -1,12 +1,13 @@
 footer
 {
-  background-color: $main-color;
+  background-color: lighten(black,10);
   padding: 10px;
   p{
     color: white;
     margin: 0px;
     a{
-      color: white;
+      color: $main-color;
+      text-decoration: none;
     }
   }
 }
