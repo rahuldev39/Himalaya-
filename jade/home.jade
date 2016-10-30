@@ -92,7 +92,46 @@ block main
     .container
       .row
         +track
-                   
+  
+  section.white.fact
+    .container
+        .tab-panel
+          ul.nav-tabs.flex-element
+            li
+              a.tab-toggle.active(href="#" data-parent="#tab1") still Growing!
+            li
+              a.tab-toggle(href="#" data-parent="#tab2") Fossilized Sea Creatures
+            li
+              a.tab-toggle(href="#" data-parent="#tab3") A God
+          
+          .tab-content
+            #tab1.tab-pane.open
+              .row.row--no-gutter
+                .col.col--7-of-12.fact-text
+                  p  The Himalayas are considered to be the tallest and youngest mountain ranges (only 70 million years young), which were caused by a continental collision between the Indian and Eurasian tectonic plates, resulting in the development of the Himalayan mountain ranges.
+                  p Various geological tests conducted by scientists have confirmed that this great mountain range still moves approximately 20mm every year.
+                  p Because of this restless or continuous movement of the plates, the whole Himalayan region is prone to various natural disasters like earthquakes, tremors, and landslides.
+                .col.col--5-of-12
+                  .fact-f1
+                  
+            #tab2.tab-pane
+              .row.row--no-gutter
+                .col.col--7-of-12.fact-text
+                  p  Although the Himalayan Mountains formed 60 million years ago, Everest’s history actually goes back a lot further.
+                  p The limestone and sandstone rock at the summit of the mountain was once part of sedimentary layers below sea level 450 million years ago.
+                  p Explorer Noel Odell first discovered the fossils embedded within Everest’s rocks in 1924, proving that the mountain had once been below sea level.
+                  p The first rock specimens from Everest were brought back by Swiss climbers in 1956 and by an American climbing team in 1963.
+                .col.col--5-of-12
+                  .fact-f2
+            #tab3.tab-pane 
+              .row.row--no-gutter
+                .col.col--7-of-12.fact-text
+                  p  In Hindu religion, the Himalaya is known as the Giri-raj, which means the “King of the Mountains”.
+                  p The Hindu people consider the Himalayas as a sacrosanct place and believe it to be the dwelling place of Gods.
+                  p It has got mention in the epic Ramayana, Mahabharat, Rig Veda, Skanda Purana and many other Puranas.
+                  p Many saints regard the Himalayas as the land of holy practices where perform the penance and worship the Lord.  
+                .col.col--5-of-12
+                  .fact-f3               
 block append script
   script(src="js/particles.js")
   script(src="js/app.js")

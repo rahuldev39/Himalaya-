@@ -1,6 +1,6 @@
+// accordion script
 $(function(){
 
-  // accordion script
     function close_accordion()
     {
       $('.accordion-toggle').removeClass('active');
@@ -33,4 +33,28 @@ $(function(){
 
         e.preventDefault();
     });
+
+});
+
+// tab-panel
+$(function(){
+
+  function close_tab()
+  {
+    $('.tab-toggle').removeClass('active');
+    $('.tab-pane').removeClass('open');
+  }
+  $('.tab-toggle').on('click',function(e){
+    var current_node = $(this).data('parent');
+    if(!$(this).hasClass('active'))
+    {
+        close_tab();
+        $(this).addClass('active');
+        $('.tab-pane' + current_node).addClass('open');
+    }
+    else {
+      $(this).addClass('active');
+    }
+    e.preventDefault();
+  });
 });

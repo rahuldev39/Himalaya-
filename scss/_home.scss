@@ -201,3 +201,49 @@ section
     }
 
   }
+.tab-panel
+{
+  ul.nav-tabs
+  {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    li
+    {
+      margin-right: 2px;
+      a{
+        display: block;
+        background-color:$main-color;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        &.active
+        {
+          background-color: $bg-color;
+          color: black;
+          border: 1px solid darken($bg-color, 2);
+          border-bottom: none;
+          margin-bottom: -1px;
+        }
+      }
+    }
+  }
+  .tab-content
+  {
+    .tab-pane
+    {
+      background-color: $bg-color;
+      border: 1px solid darken($bg-color, 2);
+      display: none;
+      &.open
+      {
+        display: block;
+      }
+      .fact-text
+      {
+        padding: 20px;
+      }
+    }
+    @include factImg;
+  }
+}

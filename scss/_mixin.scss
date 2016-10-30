@@ -34,3 +34,19 @@ $margins-val:(10,15,20,25,30);
   }
 }
 }
+
+//fact bgimg
+@mixin factImg {
+  $factVal:3;
+  @for $i from 1 through $factVal
+  {
+    .fact-f#{$i}
+    {
+      background-image: url('../img/fact#{$i}.jpg');
+      position: relative;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+    }
+  }
+}
