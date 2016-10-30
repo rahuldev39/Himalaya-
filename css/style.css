@@ -1231,5 +1231,11 @@ section {
   height: 100%;
   width: 100%;
   background-size: cover; }
+.tab-panel .tab-content .fact-f4 {
+  background-image: url("../img/fact4.jpg");
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-size: cover; }
 
 /*# sourceMappingURL=style.css.map */

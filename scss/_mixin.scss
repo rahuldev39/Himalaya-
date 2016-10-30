@@ -37,7 +37,7 @@ $margins-val:(10,15,20,25,30);
 
 //fact bgimg
 @mixin factImg {
-  $factVal:3;
+  $factVal:4;
   @for $i from 1 through $factVal
   {
     .fact-f#{$i}
