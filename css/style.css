@@ -689,5 +689,13 @@ header {
     background-position: 100% 100px; }
   100% {
     background-position: 0px 100px; } }
+footer {
+  background-color: #03A9F4;
+  padding: 10px; }
+  footer p {
+    color: white;
+    margin: 0px; }
+    footer p a {
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */
