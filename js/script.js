@@ -58,3 +58,25 @@ $(function(){
     e.preventDefault();
   });
 });
+
+//gallery animation
+$(function(){
+  function thumb_animate()
+				  {
+				  	  var thumb_count = Math.floor(Math.random() * $('.gallery-box li').length);
+
+					  console.log(thumb_count);
+
+					  $('.gallery-box li').eq(thumb_count).addClass('is-animate').siblings().removeClass('is-animate');
+				  }
+
+				 $(function(){
+
+					 setInterval(function(){
+
+					  thumb_animate();
+
+					  }, 2500);
+
+					});
+});
