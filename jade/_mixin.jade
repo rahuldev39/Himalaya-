@@ -11,10 +11,16 @@ mixin mountain-list(mountain,i)
       span #{mountain.eval}m
 
 mixin track  
-  each track,i in tecksList
+  -each track,i in tecksList
     .col.col--4-of-20
       .trek-block.flex-element.column
         img(src="img/t#{i+1}.jpg", alt="alt")
         .trak-detail.flex-element.column.align-bw.flex-grow
           strong.mar-b-10 #{track.title}
           span  #{track.time} Days 
+
+mixin gallery
+  -for (var x = 1; x <= 12; x++)
+    li
+      img(src="img/g#{x}.jpg", alt="alt")
+      
